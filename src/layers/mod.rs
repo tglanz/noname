@@ -1,13 +1,13 @@
 mod fully_connected;
+mod convolution_2d;
+
 use activations::{ActivationFunction};
-use vectors::{Vector};
-use matrices::{Matrix};
+use types::{Tensors};
 
 pub trait ForwardPass {
     fn forward_pass<Activation>(
-        input: &Vector,
-        kernels: &Matrix,
-        bias: &Vector
-    ) -> Vector
+        &self,
+        input: &Tensors,
+    ) -> Tensors
     where Activation: ActivationFunction;
 }
