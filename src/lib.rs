@@ -5,3 +5,4 @@ mod vectors;
 mod matrices;
 mod activations;
 mod layers;
+mod convolution;
